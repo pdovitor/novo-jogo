@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgmxqn8tissc2"]
+
+[ext_resource type="Script" uid="uid://bf3dd71oms7b" path="res://scripts/bola.gd" id="1_fdx0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04bs3"]
+radius = 32.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=513810717]
+script = ExtResource("1_fdx0f")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1821937926]
+polygon = PackedVector2Array(0, -32, 8, -31, 16, -28, 23, -22, 28, -16, 31, -8, 32, 0, 31, 8, 28, 16, 23, 23, 16, 28, 8, 31, 0, 32, -9, 31, -16, 28, -23, 23, -28, 16, -31, 8, -32, 0, -31, -8, -28, -16, -23, -23, -16, -28, -8, -31)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184579598]
+shape = SubResource("CircleShape2D_04bs3")

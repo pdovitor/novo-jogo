@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://v6r23ojxwvak"]
 
-[ext_resource type="Script" uid="uid://bi1e74jcdm3qy" path="res://Line2D.gd" id="1_ews7x"]
+[ext_resource type="Script" uid="uid://bi1e74jcdm3qy" path="res://scripts/Line2D.gd" id="1_ews7x"]
 
 [node name="Line2D" type="Line2D" unique_id=722609192]
 points = PackedVector2Array(0, 0, 0, 0)

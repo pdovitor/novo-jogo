@@ -1,6 +1,6 @@
 extends Line2D
 
-@onready var player: CharacterBody2D = %Player
+@onready var player: RigidBody2D = %Player
 var vec_start := Vector2.ZERO
 var vec_fin := Vector2.ZERO
 
@@ -15,5 +15,9 @@ func _input(event: InputEvent) -> void:
 		points[1] = vec_fin
 
 	if event.is_action_released("click"):
-		if player: # Boa prática para evitar crashes se o player morrer ou sumir
-			player.dir = (vec_start - vec_fin) * 2
+		if player:
+			# Calcula o vetor do estilingue
+			var forca_lancamento = (vec_start - vec_fin) #* 2
+			
+			# Chama a função do player passando a força
+			player.lancar(forca_lancamento)
