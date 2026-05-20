@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://p4ok1dg56wrp"]
 
+[ext_resource type="Texture2D" uid="uid://ydp65unpp2jp" path="res://assets/campofut.png" id="1_18ig4"]
 [ext_resource type="PackedScene" uid="uid://v6r23ojxwvak" path="res://scenes/Line2D.tscn" id="1_k77ap"]
 [ext_resource type="PackedScene" uid="uid://b6imdvlyfaaks" path="res://scenes/Player.tscn" id="3_b5kf5"]
 [ext_resource type="PackedScene" uid="uid://bgmxqn8tissc2" path="res://scenes/bola.tscn" id="3_cxv17"]
@@ -12,28 +13,46 @@ size = Vector2(1232, 20)
 
 [node name="GameScene" type="Node2D" unique_id=1962728536]
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1340690402]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1152.0736
+offset_top = -7.553006e-05
+offset_right = 1800.084
+offset_bottom = 1152.0735
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 1.5707964
+texture = ExtResource("1_18ig4")
+expand_mode = 1
+stretch_mode = 6
+
 [node name="Line2D" parent="." unique_id=722609192 instance=ExtResource("1_k77ap")]
 
 [node name="Player" parent="." unique_id=823438465 instance=ExtResource("3_b5kf5")]
 unique_name_in_owner = true
+position = Vector2(429, 320)
 
 [node name="Bola" parent="." unique_id=513810717 instance=ExtResource("3_cxv17")]
-position = Vector2(731, 290)
+position = Vector2(578, 320)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1228716601]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=207393293]
-position = Vector2(-5, 332)
+position = Vector2(4, 331)
 shape = SubResource("RectangleShape2D_cxv17")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2038637407]
-position = Vector2(1157, 332)
+position = Vector2(1148, 333)
 shape = SubResource("RectangleShape2D_cxv17")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=410313336]
-position = Vector2(576, -2)
+position = Vector2(576, -10)
 shape = SubResource("RectangleShape2D_18ig4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=889112019]
-position = Vector2(565, 651)
+position = Vector2(566, 658)
 shape = SubResource("RectangleShape2D_18ig4")
